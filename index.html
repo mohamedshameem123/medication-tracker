@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>MedTrack Dashboard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="layout">
+
+<!-- Sidebar -->
+<aside class="sidebar">
+    <h2>💊 MedTrack</h2>
+    <nav>
+        <a class="active">Dashboard</a>
+        <a>History</a>
+        <a>Settings</a>
+    </nav>
+</aside>
+
+<!-- Main -->
+<main class="main">
+
+<header class="topbar">
+    <h1>Dashboard</h1>
+    <span id="todayDate"></span>
+</header>
+
+<!-- Stats -->
+<div class="stats">
+    <div class="card stat">Total <span id="statTotal">0</span></div>
+    <div class="card stat taken">Taken <span id="statTaken">0</span></div>
+    <div class="card stat pending">Pending <span id="statPending">0</span></div>
+    <div class="card stat missed">Missed <span id="statMissed">0</span></div>
+</div>
+
+<!-- Content -->
+<div class="content">
+
+<!-- Add Form -->
+<div class="card form-card">
+<h3>Add Medicine</h3>
+
+<form id="medicineForm">
+<input id="medName" placeholder="Medicine Name" required>
+<input id="dosage" placeholder="Dosage" required>
+
+<div class="row">
+<input type="time" id="time" required>
+<input type="date" id="date" required>
+</div>
+
+<input id="notes" placeholder="Notes">
+
+<button>Add</button>
+<p id="formMessage"></p>
+</form>
+
+</div>
+
+<!-- Medicine List -->
+<div class="card list-card">
+<h3>Today's Medicines</h3>
+
+<div id="medicineTableBody" class="medicine-grid"></div>
+
+<p id="emptyState">No medicines yet</p>
+
+</div>
+
+</div>
+
+</main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
